@@ -346,7 +346,7 @@ you would use value as parameter.</li>
 </li>
 </ul>
 </blockquote>
-<p><a href="images/swapvalue.svg" data-lightbox="d80e03c9-8b14-4958-8bc2-027a54628546" data-title="swapvalue"><img src="images/swapvalue.svg" alt="swapvalue" style="zoom:50%;"></a></p>
+<p><a href="images/swapvalue.svg" data-lightbox="361e1350-a73f-47c2-bec7-4db1f0491693" data-title="swapvalue"><img src="images/swapvalue.svg" alt="swapvalue" style="zoom:50%;"></a></p>
 <h3 id="using-pointer-as-parameter">Using pointer as parameter</h3>
 <pre class="language-"><code class="lang-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
 
@@ -377,7 +377,7 @@ We copy the value of <code>a</code> to <code>x</code> and copy the value of <cod
 <li>The value <code>a</code> will be 20 and value <code>b</code> will be 10.</li>
 </ul>
 </blockquote>
-<p><a href="images/swapPointer.svg" data-lightbox="177373fa-e2aa-42c9-808c-48bc5695dcf9" data-title="swapPointer.svg"><img src="images/swapPointer.svg" alt="swapPointer.svg" style="zoom:50%;"></a></p>
+<p><a href="images/swapPointer.svg" data-lightbox="629ab61f-80cd-407c-a939-63d6673ea56f" data-title="swapPointer.svg"><img src="images/swapPointer.svg" alt="swapPointer.svg" style="zoom:50%;"></a></p>
 <h3 id="using-reference-as-parameter">Using reference as parameter</h3>
 <p>This is the feature of C++</p>
 <pre class="language-"><code class="lang-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream&gt;</span></span>
@@ -522,7 +522,7 @@ We copy the value of <code>a</code> to <code>x</code> and copy the value of <cod
     <span class="token keyword">int</span> breadth<span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-<span class="token keyword">int</span> <span class="token function">changeLength</span><span class="token punctuation">(</span><span class="token keyword">struct</span> <span class="token class-name">Rectangle</span> <span class="token operator">*</span>p<span class="token punctuation">,</span> <span class="token keyword">int</span> length<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token keyword">void</span> <span class="token function">changeLength</span><span class="token punctuation">(</span><span class="token keyword">struct</span> <span class="token class-name">Rectangle</span> <span class="token operator">*</span>p<span class="token punctuation">,</span> <span class="token keyword">int</span> length<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     p <span class="token operator">-&gt;</span> length <span class="token operator">=</span> length<span class="token punctuation">;</span>
 
 <span class="token punctuation">}</span>
@@ -578,6 +578,60 @@ We copy the value of <code>a</code> to <code>x</code> and copy the value of <cod
 
 <span class="token punctuation">}</span>
 </code></pre>
+<h3 id="converting-c-to-c">Converting C to C++</h3>
+<pre class="language-"><code class="lang-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
+
+<span class="token comment">// we would use class</span>
+<span class="token keyword">class</span> <span class="token class-name">Rectangle</span> <span class="token punctuation">{</span>
+<span class="token keyword">private</span><span class="token operator">:</span><span class="token keyword">int</span> length<span class="token punctuation">;</span>
+<span class="token keyword">private</span><span class="token operator">:</span><span class="token keyword">int</span> breadth<span class="token punctuation">;</span>
+
+<span class="token comment">// initialize the value</span>
+<span class="token comment">//void initializeSize(struct Rectangle *p, int length, int breadth) {</span>
+<span class="token comment">//    // using the pointer to setup length and breadth</span>
+<span class="token comment">//    p-&gt;length = length;</span>
+<span class="token comment">//    p-&gt;breadth = breadth;</span>
+<span class="token comment">//</span>
+<span class="token comment">//}</span>
+
+<span class="token comment">// we would use constructor to initialize the value</span>
+<span class="token keyword">public</span><span class="token operator">:</span><span class="token function">Rectangle</span><span class="token punctuation">(</span><span class="token keyword">int</span> length<span class="token punctuation">,</span> <span class="token keyword">int</span> breadth<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token operator">-&gt;</span>length <span class="token operator">=</span> length<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token operator">-&gt;</span>breadth <span class="token operator">=</span> breadth<span class="token punctuation">;</span>
+
+    <span class="token punctuation">}</span>
+
+
+<span class="token keyword">public</span><span class="token operator">:</span><span class="token keyword">int</span> <span class="token function">area</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// return rectangle.length * rectangle.breadth;</span>
+        <span class="token keyword">return</span> length <span class="token operator">*</span> breadth<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+<span class="token comment">// we would use this  parameter</span>
+<span class="token keyword">public</span><span class="token operator">:</span><span class="token keyword">void</span> <span class="token function">changeLength</span><span class="token punctuation">(</span><span class="token keyword">int</span> length<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token operator">-&gt;</span>length <span class="token operator">=</span> length<span class="token punctuation">;</span>
+
+    <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">//struct Rectangle r;</span>
+    <span class="token comment">//initializeSize(&amp;r, 5, 10);</span>
+    Rectangle r <span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">//int a = area(r);</span>
+    <span class="token keyword">int</span> a <span class="token operator">=</span> r<span class="token punctuation">.</span><span class="token function">area</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//    printf(&quot;length is %d\n&quot;, r);</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;area is %d\n&quot;</span><span class="token punctuation">,</span> a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// changeLength(&amp;r, 20);</span>
+    r<span class="token punctuation">.</span><span class="token function">changeLength</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// int b = area(r);</span>
+    <span class="token keyword">int</span> b <span class="token operator">=</span> r<span class="token punctuation">.</span><span class="token function">area</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//    printf(&quot;length is %d\n&quot;, r);</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;area is %d\n&quot;</span><span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span>
+</code></pre>
 </body></html>
                                 
                                 </section>
@@ -617,7 +671,7 @@ We copy the value of <code>a</code> to <code>x</code> and copy the value of <cod
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Function","level":"1.2.3","depth":2,"previous":{"title":"Pointer","level":"1.2.2","depth":2,"path":"Pointer.md","ref":"Pointer.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","splitter","prism","-highlight","back-to-top-button","page-toc-button","-lunr","-search","search-plus","copy-code-button","alerts","lightbox","katex","mathjax-full"],"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"shell":"bash"}},"mathjax-full":{},"splitter":{},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"lightbox":{"jquery":true},"page-toc-button":{},"back-to-top-button":{},"alerts":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{},"search-plus":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Function.md","mtime":"2019-09-23T23:19:52.736Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-23T23:26:12.586Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Function","level":"1.2.3","depth":2,"previous":{"title":"Pointer","level":"1.2.2","depth":2,"path":"Pointer.md","ref":"Pointer.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","splitter","prism","-highlight","back-to-top-button","page-toc-button","-lunr","-search","search-plus","copy-code-button","alerts","lightbox","katex","mathjax-full"],"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"shell":"bash"}},"mathjax-full":{},"splitter":{},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"lightbox":{"jquery":true},"page-toc-button":{},"back-to-top-button":{},"alerts":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{},"search-plus":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Function.md","mtime":"2019-09-24T01:43:26.954Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-24T01:46:01.011Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
