@@ -1,0 +1,443 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Pointer · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism-okaidia.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-page-toc-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-lightbox/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Function.html" />
+    
+    
+    <link rel="prev" href="Structure.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="concept.html">
+            
+                <a href="concept.html">
+            
+                    
+                    C and C++ concept
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="Structure.html">
+            
+                <a href="Structure.html">
+            
+                    
+                    Strudcture
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.2" data-path="Pointer.html">
+            
+                <a href="Pointer.html">
+            
+                    
+                    Pointer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="Function.html">
+            
+                <a href="Function.html">
+            
+                    
+                    Function
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Pointer</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <html><head></head><body><h1 id="pointer">Pointer</h1>
+<blockquote>
+<ul>
+<li>Pointer</li>
+<li>Accessing heap using poiner</li>
+<li>Refernece</li>
+<li>Pointer to structure</li>
+<li>Dynamic allocation</li>
+</ul>
+</blockquote>
+<h2 id="pointer">Pointer</h2>
+<p> Pointer is used for storing address of data.
+ Pointer will not store the data itself.</p>
+<blockquote>
+<p><strong>[info] The usage of the pointer</strong></p>
+<ol>
+<li>Accessing heap.</li>
+<li>Accessing recourse.</li>
+<li>Parameter passing.</li>
+</ol>
+</blockquote>
+<pre class="language-"><code>int main{
+    // declare and initialize data variable
+    int a = 10;
+    // declare address variable
+    int* p;
+    // initialize address variable and p stores the address of a
+    p = <span class="token entity" title="&amp;a;">&amp;a;</span>
+    // accessing data using data referencing
+    printf(&quot;%d&quot;, *p)
+}
+</code></pre><p><a href="images/pointer.svg" data-lightbox="9830ce5d-1f5c-4f03-975f-a2c6bee9a6bd" data-title="pointer"><img src="images/pointer.svg" alt="pointer" style="zoom:50%;"></a></p>
+<p><br></p>
+<h2 id="accessing-heap-using-poiner">Accessing heap using poiner</h2>
+<pre class="language-"><code>int main{
+    int* p;
+    p = (int*)malloc(5 * sizeof(int));
+
+}
+</code></pre><p>In C++</p>
+<pre class="language-"><code>p = new int[5];
+</code></pre><p><a href="images/pointerheap.svg" data-lightbox="775fe1ba-641e-45f1-b156-d0d1b4bdfa7f" data-title="pointerheap"><img src="images/pointerheap.svg" alt="pointerheap" style="zoom:50%;"></a></p>
+<p><br></p>
+<h2 id="refernece">Refernece</h2>
+<p>In C++</p>
+<pre class="language-"><code>int main{
+    // declare and initialize variable
+    int a = 10;
+    // declare and initialize refernece
+    int &amp;b = a;
+    // a is 10
+    cout &lt;&lt; a;
+    b++;
+    // b is 11
+    cout &lt;&lt; b;
+    // a is 11
+    cout &lt;&lt; a;
+}
+</code></pre><p><br></p>
+<h2 id="pointer-to-structure">Pointer to structure</h2>
+<pre class="language-"><code>struct Rectangle{
+    int length;
+    int breadth;
+}
+
+int main{
+    struct Rectangle a = {10, 5};
+    // declare and initialize the pointer
+    struct Rectangle *p = <span class="token entity" title="&amp;a;">&amp;a;</span>
+    // accessing the struct member using normal variable
+    a.length = 15;
+    // accessing the struct member using poiner variable
+    (*p).length = 20;
+    // accessing the struct member using poiner variable
+    p -&gt; length = 20;
+}
+</code></pre><p><a href="images/PointerToStruct.svg" data-lightbox="0b70f273-d184-412a-96ad-b9eb64fe500f" data-title="PointerToStruct"><img src="images/PointerToStruct.svg" alt="PointerToStruct" style="zoom:50%;"></a></p>
+<p><br></p>
+<h2 id="dynamic-allocation">Dynamic allocation</h2>
+<pre class="language-"><code>struct Rectangle{
+    int length;
+    int breadth;
+}
+
+int main{
+    struct Rectangle *p;
+    //create variable in heap by using malloc function
+    p =(struct Rectangle*) malloc(sizeof(struct Rectangle));
+    // assign variable length
+    p -&gt; length = 10;
+    // assign variable breadth
+    p -&gt; breadth = 5;
+
+}
+</code></pre><p><a href="images/PointerToStruct.svg" data-lightbox="6b317f27-4ad2-4340-bfac-f7906cbb8b54" data-title="PointerToStruct"><img src="images/PointerToStruct.svg" alt="PointerToStruct" style="zoom:50%;"></a></p>
+<p><br></p>
+</body></html>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Structure.html" class="navigation navigation-prev " aria-label="Previous page: Strudcture">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Function.html" class="navigation navigation-next " aria-label="Next page: Function">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Pointer","level":"1.2.2","depth":2,"next":{"title":"Function","level":"1.2.3","depth":2,"path":"Function.md","ref":"Function.md","articles":[]},"previous":{"title":"Strudcture","level":"1.2.1","depth":2,"path":"Structure.md","ref":"Structure.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","splitter","prism","-highlight","back-to-top-button","page-toc-button","-lunr","-search","search-plus","copy-code-button","alerts","lightbox","katex","mathjax-full"],"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"shell":"bash"}},"mathjax-full":{},"splitter":{},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"lightbox":{"jquery":true},"page-toc-button":{},"back-to-top-button":{},"alerts":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{},"search-plus":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Pointer.md","mtime":"2019-09-23T23:14:00.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-24T01:51:36.403Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-page-toc-button/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lightbox/jquery.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lightbox/lightbox.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-mathjax-full/config.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-mathjax-full/mathjax.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
