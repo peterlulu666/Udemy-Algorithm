@@ -346,7 +346,7 @@ you would use value as parameter.</li>
 </li>
 </ul>
 </blockquote>
-<p><a href="images/swapvalue.svg" data-lightbox="b4130e75-53a1-4fc6-b3c9-0c26704efba5" data-title="swapvalue"><img src="images/swapvalue.svg" alt="swapvalue" style="zoom:50%;"></a></p>
+<p><a href="images/swapvalue.svg" data-lightbox="4469ca00-37be-4a6b-9c5c-bde7ad9df081" data-title="swapvalue"><img src="images/swapvalue.svg" alt="swapvalue" style="zoom:50%;"></a></p>
 <h3 id="using-pointer-as-parameter">Using pointer as parameter</h3>
 <pre class="language-"><code class="lang-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
 
@@ -377,7 +377,7 @@ We copy the value of <code>a</code> to <code>x</code> and copy the value of <cod
 <li>The value <code>a</code> will be 20 and value <code>b</code> will be 10.</li>
 </ul>
 </blockquote>
-<p><a href="images/swapPointer.svg" data-lightbox="08c51e96-bdd8-4310-b4ac-2988a596927d" data-title="swapPointer.svg"><img src="images/swapPointer.svg" alt="swapPointer.svg" style="zoom:50%;"></a></p>
+<p><a href="images/swapPointer.svg" data-lightbox="841e1647-9cd5-42e7-9373-ba8f796d947d" data-title="swapPointer.svg"><img src="images/swapPointer.svg" alt="swapPointer.svg" style="zoom:50%;"></a></p>
 <h3 id="using-reference-as-parameter">Using reference as parameter</h3>
 <p>This is the feature of C++</p>
 <pre class="language-"><code class="lang-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream&gt;</span></span>
@@ -649,6 +649,124 @@ We copy the value of <code>a</code> to <code>x</code> and copy the value of <cod
 
 <span class="token punctuation">}</span>
 </code></pre>
+<h3 id="class-and-constructor">Class and constructor</h3>
+<pre class="language-"><code class="lang-cpp"><span class="token comment">// we would use this in C++</span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream&gt;</span></span>
+
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Rectangle</span> <span class="token punctuation">{</span>
+<span class="token keyword">private</span><span class="token operator">:</span>
+    <span class="token keyword">int</span> length<span class="token punctuation">;</span>
+<span class="token keyword">private</span><span class="token operator">:</span>
+    <span class="token keyword">int</span> breadth<span class="token punctuation">;</span>
+<span class="token comment">// default constructor</span>
+<span class="token keyword">public</span><span class="token operator">:</span>
+    <span class="token function">Rectangle</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        length <span class="token operator">=</span> breadth <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">Rectangle</span><span class="token punctuation">(</span><span class="token keyword">int</span> length<span class="token punctuation">,</span> <span class="token keyword">int</span> breadth<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">int</span> <span class="token function">area</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">int</span> <span class="token function">perimeter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// getter</span>
+    <span class="token keyword">int</span> <span class="token function">getLength</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">const</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> length<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+<span class="token comment">// setter</span>
+    <span class="token keyword">void</span> <span class="token function">setLength</span><span class="token punctuation">(</span><span class="token keyword">int</span> length<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        Rectangle<span class="token operator">::</span>length <span class="token operator">=</span> length<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+<span class="token comment">// destructor</span>
+    <span class="token operator">~</span><span class="token function">Rectangle</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+Rectangle<span class="token operator">::</span><span class="token function">Rectangle</span><span class="token punctuation">(</span><span class="token keyword">int</span> length<span class="token punctuation">,</span> <span class="token keyword">int</span> breadth<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token operator">-&gt;</span>length <span class="token operator">=</span> length<span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token operator">-&gt;</span>breadth <span class="token operator">=</span> breadth<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">int</span> Rectangle<span class="token operator">::</span><span class="token function">area</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> length <span class="token operator">*</span> breadth<span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span>
+
+<span class="token keyword">int</span> Rectangle<span class="token operator">::</span><span class="token function">perimeter</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token number">2</span> <span class="token operator">*</span> <span class="token punctuation">(</span>length <span class="token operator">+</span> breadth<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span>
+
+Rectangle<span class="token operator">::</span><span class="token operator">~</span><span class="token function">Rectangle</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+<span class="token punctuation">}</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    Rectangle <span class="token function">r</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> r<span class="token punctuation">.</span><span class="token function">area</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> r<span class="token punctuation">.</span><span class="token function">perimeter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    r<span class="token punctuation">.</span><span class="token function">setLength</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> r<span class="token punctuation">.</span><span class="token function">getLength</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="classes">Classes</h3>
+<pre class="language-"><code class="lang-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream&gt;</span></span>
+
+<span class="token comment">// we would create class T</span>
+<span class="token keyword">template</span><span class="token operator">&lt;</span><span class="token keyword">class</span> <span class="token class-name">T</span><span class="token operator">&gt;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Arithmetic</span> <span class="token punctuation">{</span>
+<span class="token comment">// we would create two class members</span>
+<span class="token keyword">private</span><span class="token operator">:</span>
+    <span class="token comment">// int a;</span>
+    T a<span class="token punctuation">;</span>
+    <span class="token comment">// int b;</span>
+    T b<span class="token punctuation">;</span>
+<span class="token keyword">public</span><span class="token operator">:</span>
+<span class="token comment">// the constructor would take two parameter a and b</span>
+    <span class="token comment">//Arithmetic(int a, int b);</span>
+    <span class="token function">Arithmetic</span><span class="token punctuation">(</span>T a<span class="token punctuation">,</span> T b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">//int add();</span>
+    T <span class="token function">add</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">//int sub();</span>
+    T <span class="token function">sub</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">template</span><span class="token operator">&lt;</span><span class="token keyword">class</span> <span class="token class-name">T</span><span class="token operator">&gt;</span>
+
+Arithmetic<span class="token operator">&lt;</span>T<span class="token operator">&gt;</span><span class="token operator">::</span><span class="token function">Arithmetic</span><span class="token punctuation">(</span>T a<span class="token punctuation">,</span> T b<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token operator">-&gt;</span>a <span class="token operator">=</span> a<span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token operator">-&gt;</span>b <span class="token operator">=</span> b<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//add function</span>
+<span class="token keyword">template</span><span class="token operator">&lt;</span><span class="token keyword">class</span> <span class="token class-name">T</span><span class="token operator">&gt;</span>
+T Arithmetic<span class="token operator">&lt;</span>T<span class="token operator">&gt;</span><span class="token operator">::</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> a <span class="token operator">+</span> b<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//subtract function</span>
+<span class="token keyword">template</span><span class="token operator">&lt;</span><span class="token keyword">class</span> <span class="token class-name">T</span><span class="token operator">&gt;</span>
+T Arithmetic<span class="token operator">&lt;</span>T<span class="token operator">&gt;</span><span class="token operator">::</span><span class="token function">sub</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> a <span class="token operator">-</span> b<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    Arithmetic<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span> <span class="token function">ar</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    std<span class="token operator">::</span>cout <span class="token operator">&lt;&lt;</span> ar<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    std<span class="token operator">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token string">&quot;\n&quot;</span><span class="token punctuation">;</span>
+    Arithmetic<span class="token operator">&lt;</span><span class="token keyword">float</span><span class="token operator">&gt;</span> <span class="token function">ari</span><span class="token punctuation">(</span><span class="token number">1.5</span><span class="token punctuation">,</span> <span class="token number">1.2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    std<span class="token operator">::</span>cout <span class="token operator">&lt;&lt;</span> ari<span class="token punctuation">.</span><span class="token function">sub</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
 </body></html>
                                 
                                 </section>
@@ -688,7 +806,7 @@ We copy the value of <code>a</code> to <code>x</code> and copy the value of <cod
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Function","level":"1.2.3","depth":2,"previous":{"title":"Pointer","level":"1.2.2","depth":2,"path":"Pointer.md","ref":"Pointer.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","splitter","prism","-highlight","back-to-top-button","page-toc-button","-lunr","-search","search-plus","copy-code-button","alerts","lightbox","katex","mathjax-full"],"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"shell":"bash"}},"mathjax-full":{},"splitter":{},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"lightbox":{"jquery":true},"page-toc-button":{},"back-to-top-button":{},"alerts":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{},"search-plus":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Function.md","mtime":"2019-09-24T21:17:53.207Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-24T21:18:12.311Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Function","level":"1.2.3","depth":2,"previous":{"title":"Pointer","level":"1.2.2","depth":2,"path":"Pointer.md","ref":"Pointer.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","splitter","prism","-highlight","back-to-top-button","page-toc-button","-lunr","-search","search-plus","copy-code-button","alerts","lightbox","katex","mathjax-full"],"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"shell":"bash"}},"mathjax-full":{},"splitter":{},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"lightbox":{"jquery":true},"page-toc-button":{},"back-to-top-button":{},"alerts":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{},"search-plus":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Function.md","mtime":"2019-09-25T20:29:52.617Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-25T20:32:34.285Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
