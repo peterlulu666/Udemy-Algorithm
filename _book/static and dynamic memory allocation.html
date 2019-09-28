@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>C and C++ concept · GitBook</title>
+        <title>static and dynamic memory allocation · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -85,10 +85,8 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="Structure.html" />
     
-    
-    <link rel="prev" href="./" />
+    <link rel="prev" href="Introduction.html" />
     
 
     </head>
@@ -130,7 +128,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2" data-path="concept.html">
+        <li class="chapter " data-level="1.2" data-path="concept.html">
             
                 <a href="concept.html">
             
@@ -215,7 +213,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.2" data-path="static and dynamic memory allocation.html">
+        <li class="chapter active" data-level="1.3.2" data-path="static and dynamic memory allocation.html">
             
                 <a href="static and dynamic memory allocation.html">
             
@@ -263,7 +261,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >C and C++ concept</a>
+        <a href="." >static and dynamic memory allocation</a>
     </h1>
 </div>
 
@@ -278,7 +276,24 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <html><head></head><body><h1 id="c-and-c-concept">C and C++ concept</h1>
+                                <html><head></head><body><h1 id="static-and-dynamic-memory-allocation">static and dynamic memory allocation</h1>
+<blockquote>
+<ul>
+<li>About main memory</li>
+</ul>
+</blockquote>
+<h2 id="about-main-memory">About main memory</h2>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>0</mn><mo>&#x2212;</mo><mn>6</mn><mn>5</mn><mn>5</mn><mn>3</mn><mn>5</mn></mrow><annotation encoding="application/x-tex">0 - 65535</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">0</span><span class="mbin">&#x2212;</span><span class="mord mathrm">6</span><span class="mord mathrm">5</span><span class="mord mathrm">5</span><span class="mord mathrm">3</span><span class="mord mathrm">5</span></span></span></span>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>6</mn><mn>5</mn><mn>5</mn><mn>3</mn><mn>5</mn><mo>=</mo><mn>6</mn><mn>4</mn><mo>&#xD7;</mo><mn>1</mn><mn>0</mn><mn>2</mn><mn>4</mn><mo>=</mo><mn>6</mn><mn>4</mn><mi>k</mi><mi>b</mi></mrow><annotation encoding="application/x-tex">65535 = 64 \times 1024 = 64kb</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.77777em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">6</span><span class="mord mathrm">5</span><span class="mord mathrm">5</span><span class="mord mathrm">3</span><span class="mord mathrm">5</span><span class="mrel">=</span><span class="mord mathrm">6</span><span class="mord mathrm">4</span><span class="mbin">&#xD7;</span><span class="mord mathrm">1</span><span class="mord mathrm">0</span><span class="mord mathrm">2</span><span class="mord mathrm">4</span><span class="mrel">=</span><span class="mord mathrm">6</span><span class="mord mathrm">4</span><span class="mord mathit" style="margin-right:0.03148em;">k</span><span class="mord mathit">b</span></span></span></span></p>
+<blockquote>
+<p><strong>[info] Static memory allocation</strong></p>
+<ul>
+<li>The program is brought into the code section.</li>
+<li>The variable is brought into the stack.</li>
+</ul>
+</blockquote>
+<p><a href="images/staticMemory.svg" data-lightbox="10918058-5c81-470d-86d9-85f214e76bc4" data-title="staticMemory"><img src="images/staticMemory.svg" alt="staticMemory" style="zoom:50%;"></a></p>
+<p><br></p>
 </body></html>
                                 
                                 </section>
@@ -306,14 +321,10 @@
 
             
                 
-                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Introduction">
+                <a href="Introduction.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Introduction">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="Structure.html" class="navigation navigation-next " aria-label="Next page: Strudcture">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -322,7 +333,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"C and C++ concept","level":"1.2","depth":1,"next":{"title":"Strudcture","level":"1.2.1","depth":2,"path":"Structure.md","ref":"Structure.md","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","splitter","prism","-highlight","back-to-top-button","page-toc-button","-lunr","-search","search-plus","copy-code-button","alerts","lightbox","katex","mathjax-full"],"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"shell":"bash"}},"mathjax-full":{},"splitter":{},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"lightbox":{"jquery":true},"page-toc-button":{},"back-to-top-button":{},"alerts":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{},"search-plus":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"concept.md","mtime":"2019-09-23T23:14:01.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-28T16:13:10.149Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"static and dynamic memory allocation","level":"1.3.2","depth":2,"previous":{"title":"Introduction","level":"1.3.1","depth":2,"path":"Introduction.md","ref":"Introduction.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","splitter","prism","-highlight","back-to-top-button","page-toc-button","-lunr","-search","search-plus","copy-code-button","alerts","lightbox","katex","mathjax-full","livereload"],"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"shell":"bash"}},"mathjax-full":{},"livereload":{},"splitter":{},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"lightbox":{"jquery":true},"page-toc-button":{},"back-to-top-button":{},"alerts":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{},"search-plus":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"static and dynamic memory allocation.md","mtime":"2019-09-28T16:10:43.273Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-28T16:13:14.690Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
@@ -377,6 +388,10 @@
     
         
         <script src="gitbook/gitbook-plugin-mathjax-full/mathjax.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         
