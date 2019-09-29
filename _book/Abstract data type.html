@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Stack and heap · GitBook</title>
+        <title>Abstract data type · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -85,10 +85,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="Type of data structure.html" />
+    <link rel="next" href="Time and space complexity.html" />
     
     
-    <link rel="prev" href="Introduction.html" />
+    <link rel="prev" href="Type of data structure.html" />
     
 
     </head>
@@ -215,7 +215,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.3.2" data-path="static and dynamic memory allocation.html">
+        <li class="chapter " data-level="1.3.2" data-path="static and dynamic memory allocation.html">
             
                 <a href="static and dynamic memory allocation.html">
             
@@ -241,7 +241,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.4" data-path="Abstract data type.html">
+        <li class="chapter active" data-level="1.3.4" data-path="Abstract data type.html">
             
                 <a href="Abstract data type.html">
             
@@ -302,7 +302,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Stack and heap</a>
+        <a href="." >Abstract data type</a>
     </h1>
 </div>
 
@@ -317,58 +317,53 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <html><head></head><body><h1 id="static-and-dynamic-memory-allocation">Static and dynamic memory allocation</h1>
+                                <html><head></head><body><h1 id="abstract-data-type">Abstract data type</h1>
 <blockquote>
 <ul>
-<li>About main memory</li>
-<li>Stack and heap memory</li>
+<li>Primitive data type</li>
+<li>Abstract data type</li>
 </ul>
 </blockquote>
-<h2 id="about-main-memory">About main memory</h2>
-<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>0</mn><mo>&#x2212;</mo><mn>6</mn><mn>5</mn><mn>5</mn><mn>3</mn><mn>5</mn></mrow><annotation encoding="application/x-tex">0 - 65535</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">0</span><span class="mbin">&#x2212;</span><span class="mord mathrm">6</span><span class="mord mathrm">5</span><span class="mord mathrm">5</span><span class="mord mathrm">3</span><span class="mord mathrm">5</span></span></span></span>
-<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>6</mn><mn>5</mn><mn>5</mn><mn>3</mn><mn>5</mn><mo>=</mo><mn>6</mn><mn>4</mn><mo>&#xD7;</mo><mn>1</mn><mn>0</mn><mn>2</mn><mn>4</mn><mo>=</mo><mn>6</mn><mn>4</mn><mi>k</mi><mi>b</mi></mrow><annotation encoding="application/x-tex">65535 = 64 \times 1024 = 64kb</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.77777em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">6</span><span class="mord mathrm">5</span><span class="mord mathrm">5</span><span class="mord mathrm">3</span><span class="mord mathrm">5</span><span class="mrel">=</span><span class="mord mathrm">6</span><span class="mord mathrm">4</span><span class="mbin">&#xD7;</span><span class="mord mathrm">1</span><span class="mord mathrm">0</span><span class="mord mathrm">2</span><span class="mord mathrm">4</span><span class="mrel">=</span><span class="mord mathrm">6</span><span class="mord mathrm">4</span><span class="mord mathit" style="margin-right:0.03148em;">k</span><span class="mord mathit">b</span></span></span></span></p>
-<blockquote>
-<p><strong>[info] Static memory allocation</strong></p>
-<ul>
-<li>The program is brought into the code section.</li>
-<li>The variable is brought into the stack.</li>
+<h2 id="primitive-data-type">Primitive data type</h2>
+<ol>
+<li>Representing of data
+Representing INTEGER data type <code>int a</code></li>
+</ol>
+<p><a href="images/representingData.svg" data-lightbox="6f29c5ab-eb85-4eb6-99cd-aa9976ad2355" data-title="representingData"><img src="images/representingData.svg" alt="representingData" style="zoom:50%;"></a></p>
+<ol>
+<li>Operating on data<ul>
+<li><code>+ - * / % ++ -- = &lt;= &gt;= !=</code></li>
 </ul>
-</blockquote>
-<p><a href="images/staticMemory.svg" data-lightbox="e8b1a90a-cac0-4ae2-b5cc-e0b890f0f932" data-title="staticMemory"><img src="images/staticMemory.svg" alt="staticMemory" style="zoom:50%;"></a></p>
+</li>
+</ol>
 <p><br></p>
-<h2 id="stack-and-heap-memory">Stack and heap memory</h2>
-<p>Static allocation</p>
-<pre class="language-"><code>void fun2(int i){
-    int a;
-    ...
-}
-
-void fun1(){
-    int x;
-    fun2(x);
-    ...
-}
-
-int main(){
-    int a;
-    fun1();
-    ...
-}
-</code></pre><p><a href="images/funMemory.svg" data-lightbox="309639bb-de6f-45c7-b80c-5f2ee9ea349d" data-title="funMemory"><img src="images/funMemory.svg" alt="funMemory" style="zoom:50%;"></a></p>
-<p>Using pointer to access heap</p>
-<p>Dynamic allocation</p>
-<pre class="language-"><code>int main(){
-    int* p;
-    //C++
-    p = new int[5];
-    //c
-    p = (int*)malloc(2 * 5);
-    delete []p;
-    // release the memory
-    p = NULL;
-
-}
-</code></pre><p><a href="images/heapMemory.svg" data-lightbox="a2afc8d2-bd73-4096-831d-a3c4e4b20593" data-title="heapMemory"><img src="images/heapMemory.svg" alt="heapMemory" style="zoom:50%;"></a></p>
+<h2 id="abstract-data-type">Abstract data type</h2>
+<p>When we have data representation and data operation, it will be data type. We would put them together and define the class in C++. The internal details are hiding in the class.</p>
+<ol>
+<li>Abstract data<ul>
+<li>List: 1, 2, 3, 4, 5, 6, 7, 8</li>
+</ul>
+</li>
+<li>Representing data<ol>
+<li>space for storing data<ol>
+<li>using array to store data</li>
+<li>using linked list to store data</li>
+</ol>
+</li>
+<li>capacity</li>
+<li>size</li>
+</ol>
+</li>
+<li>Operating on data<ol>
+<li>add(element), append(element), add(index, element), insert(index, element)</li>
+<li>remove(index)</li>
+<li>set(index, element), replace(index, element)</li>
+<li>get(index)</li>
+<li>search(key), contains(key)</li>
+<li>sort()</li>
+</ol>
+</li>
+</ol>
 </body></html>
                                 
                                 </section>
@@ -396,12 +391,12 @@ int main(){
 
             
                 
-                <a href="Introduction.html" class="navigation navigation-prev " aria-label="Previous page: Introduction">
+                <a href="Type of data structure.html" class="navigation navigation-prev " aria-label="Previous page: Type of data structure">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="Type of data structure.html" class="navigation navigation-next " aria-label="Next page: Type of data structure">
+                <a href="Time and space complexity.html" class="navigation navigation-next " aria-label="Next page: Time and space complexity">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -412,7 +407,7 @@ int main(){
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Stack and heap","level":"1.3.2","depth":2,"next":{"title":"Type of data structure","level":"1.3.3","depth":2,"path":"Type of data structure.md","ref":"Type of data structure.md","articles":[]},"previous":{"title":"Introduction","level":"1.3.1","depth":2,"path":"Introduction.md","ref":"Introduction.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","splitter","prism","-highlight","back-to-top-button","page-toc-button","-lunr","-search","search-plus","copy-code-button","alerts","lightbox","katex","mathjax-full"],"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"shell":"bash"}},"mathjax-full":{},"splitter":{},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"lightbox":{"jquery":true},"page-toc-button":{},"back-to-top-button":{},"alerts":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{},"search-plus":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"static and dynamic memory allocation.md","mtime":"2019-09-28T17:22:12.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-29T00:12:00.811Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Abstract data type","level":"1.3.4","depth":2,"next":{"title":"Time and space complexity","level":"1.3.5","depth":2,"path":"Time and space complexity.md","ref":"Time and space complexity.md","articles":[]},"previous":{"title":"Type of data structure","level":"1.3.3","depth":2,"path":"Type of data structure.md","ref":"Type of data structure.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","splitter","prism","-highlight","back-to-top-button","page-toc-button","-lunr","-search","search-plus","copy-code-button","alerts","lightbox","katex","mathjax-full"],"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"shell":"bash"}},"mathjax-full":{},"splitter":{},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"lightbox":{"jquery":true},"page-toc-button":{},"back-to-top-button":{},"alerts":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{},"search-plus":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Abstract data type.md","mtime":"2019-09-29T00:00:30.273Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-29T00:12:00.811Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
