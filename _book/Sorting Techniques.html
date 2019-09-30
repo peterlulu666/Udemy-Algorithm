@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Strudcture · GitBook</title>
+        <title>Sorting Techniques · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -85,10 +85,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="Pointer.html" />
+    <link rel="next" href="Selection Sort.html" />
     
     
-    <link rel="prev" href="concept.html" />
+    <link rel="prev" href="Time and space complexity.html" />
     
 
     </head>
@@ -144,7 +144,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.2.1" data-path="Structure.html">
+        <li class="chapter " data-level="1.2.1" data-path="Structure.html">
             
                 <a href="Structure.html">
             
@@ -272,7 +272,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4" data-path="Sorting Techniques.html">
+        <li class="chapter active" data-level="1.4" data-path="Sorting Techniques.html">
             
                 <a href="Sorting Techniques.html">
             
@@ -334,7 +334,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Strudcture</a>
+        <a href="." >Sorting Techniques</a>
     </h1>
 </div>
 
@@ -349,76 +349,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <html><head></head><body><h1 id="strudcture">Strudcture</h1>
-<blockquote>
-<ul>
-<li>Create rectangle</li>
-<li>Create complex number</li>
-<li>Create student</li>
-<li>Play cards</li>
-</ul>
-</blockquote>
-<p><br></p>
-<h2 id="create-rectangle">Create rectangle</h2>
-<pre class="language-"><code>struct Rectangle{
-    int length;
-    int breadth;
-}
-
-int main(){
-    // initialize variable
-    struct Rectangle r;
-    // initialize and declare variable
-    struct Rectangle r = {10, 5};
-
-    r.length = 15;
-    r.breadth = 10;
-
-    printf(&quot;Area of Rectangle is %d&quot;, r.length * r.breadth);
-}
-</code></pre><p><br></p>
-<h2 id="create-complex-number">Create complex number</h2>
-<pre class="language-"><code>struct Complex{
-    int realNumber;
-    int imgNumber;
-}
-</code></pre><p><br></p>
-<h2 id="create-student">Create student</h2>
-<pre class="language-"><code>struct Student{
-    int roll;
-    char name[28];
-    char department[10];
-    char address[90];
-}
-
-// We would access the date
-struct Student s;
-s.roll = 10;
-r.name = &quot;Bob&quot;;
-</code></pre><p><br></p>
-<h2 id="play-cards">Play cards</h2>
-<pre class="language-"><code>struct Card{
-    int face;
-    int shape;
-    int color;
-
-}
-</code></pre><pre class="language-"><code>int main{
-    struct Card c;
-    c.face = 1;
-    c.shape = 0;
-    c.color = 0;
-}
-</code></pre><pre class="language-"><code>int main(){
-    struct Card deck[52] = {{1, 0, 0}, {2, 0, 0}...
-                            {1, 1, 0}, {2, 1, 0}...
-                            ...
-                            }
-
-    printf(&quot;%d&quot;, deck[0].face);
-    printf(&quot;%d&quot;, deck[0].shape);
-}
-</code></pre><p><br></p>
+                                <html><head></head><body><h1 id="sorting-techniques">Sorting Techniques</h1>
 </body></html>
                                 
                                 </section>
@@ -446,12 +377,12 @@ r.name = &quot;Bob&quot;;
 
             
                 
-                <a href="concept.html" class="navigation navigation-prev " aria-label="Previous page: C and C++ concept">
+                <a href="Time and space complexity.html" class="navigation navigation-prev " aria-label="Previous page: Time and space complexity">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="Pointer.html" class="navigation navigation-next " aria-label="Next page: Pointer">
+                <a href="Selection Sort.html" class="navigation navigation-next " aria-label="Next page: Selection Sort">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -462,7 +393,7 @@ r.name = &quot;Bob&quot;;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Strudcture","level":"1.2.1","depth":2,"next":{"title":"Pointer","level":"1.2.2","depth":2,"path":"Pointer.md","ref":"Pointer.md","articles":[]},"previous":{"title":"C and C++ concept","level":"1.2","depth":1,"path":"concept.md","ref":"concept.md","articles":[{"title":"Strudcture","level":"1.2.1","depth":2,"path":"Structure.md","ref":"Structure.md","articles":[]},{"title":"Pointer","level":"1.2.2","depth":2,"path":"Pointer.md","ref":"Pointer.md","articles":[]},{"title":"Function","level":"1.2.3","depth":2,"path":"Function.md","ref":"Function.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","splitter","prism","-highlight","back-to-top-button","page-toc-button","-lunr","-search","search-plus","copy-code-button","alerts","lightbox","katex","mathjax-full"],"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"shell":"bash"}},"mathjax-full":{},"splitter":{},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"lightbox":{"jquery":true},"page-toc-button":{},"back-to-top-button":{},"alerts":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{},"search-plus":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Structure.md","mtime":"2019-09-23T23:20:27.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-30T00:12:59.225Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Sorting Techniques","level":"1.4","depth":1,"next":{"title":"Selection Sort","level":"1.4.1","depth":2,"path":"Selection Sort.md","ref":"Selection Sort.md","articles":[]},"previous":{"title":"Time and space complexity","level":"1.3.5","depth":2,"path":"Time and space complexity.md","ref":"Time and space complexity.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","splitter","prism","-highlight","back-to-top-button","page-toc-button","-lunr","-search","search-plus","copy-code-button","alerts","lightbox","katex","mathjax-full"],"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"shell":"bash"}},"mathjax-full":{},"splitter":{},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"lightbox":{"jquery":true},"page-toc-button":{},"back-to-top-button":{},"alerts":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{},"search-plus":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Sorting Techniques.md","mtime":"2019-09-30T00:09:39.558Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-30T00:12:59.225Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
